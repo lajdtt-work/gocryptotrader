@@ -101,6 +101,8 @@ func (o *OKCoin) SetDefaults() {
 	o.AssetTypes = []string{ticker.Spot}
 	o.SupportsAutoPairUpdating = false
 	o.SupportsRESTTickerBatching = false
+	o.SupportsRESTAPI = true
+	o.SupportsWebsocketAPI = true
 	o.WebsocketInit()
 }
 

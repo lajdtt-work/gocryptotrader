@@ -55,6 +55,8 @@ func (a *Alphapoint) SetDefaults() {
 	a.AssetTypes = []string{ticker.Spot}
 	a.SupportsAutoPairUpdating = false
 	a.SupportsRESTTickerBatching = false
+	a.SupportsRESTAPI = true
+	a.SupportsWebsocketAPI = true
 	a.Requester = request.New(a.Name,
 		request.NewRateLimit(time.Minute*10, alphapointAuthRate),
 		request.NewRateLimit(time.Minute*10, alphapointUnauthRate),

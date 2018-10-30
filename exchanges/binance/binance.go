@@ -69,6 +69,8 @@ func (b *Binance) SetDefaults() {
 	b.AssetTypes = []string{ticker.Spot}
 	b.SupportsAutoPairUpdating = true
 	b.SupportsRESTTickerBatching = true
+	b.SupportsRESTAPI = true
+	b.SupportsWebsocketAPI = true
 	b.SetValues()
 	b.Requester = request.New(b.Name,
 		request.NewRateLimit(time.Second, binanceAuthRate),
